@@ -1,0 +1,18 @@
+<?php
+
+namespace {{ namespace }};
+use App\Services\BaseService;
+
+/**
+ *  {{ class }}
+ */
+class {{ class }} extends BaseService
+{
+
+    public function modelName(): string
+    {
+        return Model::class;
+    }
+
+
+}
