@@ -1,0 +1,25 @@
+@import "bootstrap";
+@import "default";
+
+
+#app {
+    @extend .default-padding;
+
+    min-height: 100vh;
+
+    .home, .link {
+        .home-item, .link-item {
+            &:nth-child(1) {
+                @extend .default-margin-b;
+            }
+        }
+    }
+
+    .customer-button-list {
+        button {
+            &:nth-child(1) {
+                @extend .default-margin-b;
+            }
+        }
+    }
+}

@@ -22,6 +22,9 @@ migrate:
 migrate-seed:
 	@$(SAIL) artisan migrate:fresh --seed -n --force
 
+watch:
+	@$(SAIL) yarn dev
+
 # Chown elastic folders
 chown:
 	chown -R "$$(id -u):$$(id -g)" ./vendor ./var

@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
+            $table->uuid();
+
+            $table->string('name');
+            $table->string('phone');
+
+            $table->index('uuid');
+
             $table->timestamps();
         });
     }
