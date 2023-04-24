@@ -1,0 +1,15 @@
+.default-padding {
+    @extend .p-3;
+}
+
+.default-margin {
+    @extend .m-3;
+}
+
+.default-margin-y {
+    @extend .my-3;
+}
+
+.default-margin-b {
+    @extend .mb-3;
+}

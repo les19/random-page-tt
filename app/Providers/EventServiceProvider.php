@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Customer\Customer;
+use App\Models\Link\Link;
+use App\Observers\Customer\CustomerObserver;
+use App\Observers\Link\LinkObserver;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -25,7 +29,13 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Customer::observe([
+            CustomerObserver::class,
+        ]);
+
+        Link::observe([
+            LinkObserver::class,
+        ]);
     }
 
     /**
