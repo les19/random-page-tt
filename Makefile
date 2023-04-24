@@ -46,4 +46,4 @@ composer-install:
 setup: sail up key
 
 # Run project
-start: chown up composer-install migrate-seed
+start: chown up composer-install migrate-seed watch
